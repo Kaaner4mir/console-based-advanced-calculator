@@ -28,6 +28,7 @@ class Initializer
                     case 6: Advanced.Root(SymbolsAdvanced.Root, (inputVal1, inputVal2) => Math.Pow(inputVal2, 1.0 / inputVal1)); break;
                     case 7: Advanced.Factorial(SymbolsAdvanced.Factorial); break;
                     case 8: Advanced.Modulo(SymbolsAdvanced.Modulo, (inputVal1, inputVal2) => inputVal1 % inputVal2); break;
+                    case 9: Trigonometry.Operations(); break;
                     default: ConsoleHelper.WriteColored("\n❓ You have made an invalid transaction!", ConsoleColor.DarkRed); break;
                 }
                 ConsoleHelper.WaitingScreen();

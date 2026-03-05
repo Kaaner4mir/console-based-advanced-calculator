@@ -9,4 +9,9 @@
     {
         Exponentiation, Root, Factorial, Modulo
     }
+
+    public enum SymbolsTrigonometry
+    {
+        Sine, Cosine, Tangent, Cotangent, Secant, Cosecant
+    }
 }
