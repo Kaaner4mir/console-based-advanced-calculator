@@ -24,6 +24,11 @@ class Initializer
                     case 2: Elementary.Operations(SymbolsElementary.Subtraction, (inputVal1, inputVal2) => inputVal1 - inputVal2); break;
                     case 3: Elementary.Operations(SymbolsElementary.Multiplication, (inputVal1, inputVal2) => inputVal1 * inputVal2); break;
                     case 4: Elementary.Operations(SymbolsElementary.Division, (inputVal1, inputVal2) => inputVal1 / inputVal2); break;
+                    case 5: Advanced.Exponentiation(SymbolsAdvanced.Exponentiation, (inputVal1, inputVal2) => Math.Pow(inputVal1, inputVal2)); break;
+                    case 6: Advanced.Root(SymbolsAdvanced.Root, (inputVal1, inputVal2) => Math.Pow(inputVal2, 1.0 / inputVal1)); break;
+                    case 7: Advanced.Factorial(SymbolsAdvanced.Factorial); break;
+                    case 8: Advanced.Modulo(SymbolsAdvanced.Modulo, (inputVal1, inputVal2) => inputVal1 % inputVal2); break;
+                    default: ConsoleHelper.WriteColored("\n❓ You have made an invalid transaction!", ConsoleColor.DarkRed); break;
                 }
                 ConsoleHelper.WaitingScreen();
             }

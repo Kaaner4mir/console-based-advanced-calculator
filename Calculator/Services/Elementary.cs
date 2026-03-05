@@ -2,12 +2,12 @@
 {
     public class Elementary
     {
-        public static decimal? Operations(SymbolsElementary symbol, Func<decimal, decimal, decimal> operation)
+        public static double? Operations(SymbolsElementary symbol, Func<double, double, double> operation)
         {
             try
             {
-                decimal inputVal1 = ConsoleHelper.GetInput<decimal>($"👉 Enter the first value: ");
-                decimal inputVal2 = ConsoleHelper.GetInput<decimal>($"👉 Enter the second value: ");
+                double inputVal1 = ConsoleHelper.GetInput<double>($"👉 Enter the first value: ");
+                double inputVal2 = ConsoleHelper.GetInput<double>($"👉 Enter the second value: ");
 
                 if (symbol == SymbolsElementary.Division)
                 {
@@ -22,7 +22,7 @@
                     }
                 }
 
-                decimal result = operation(inputVal1, inputVal2);
+                double result = operation(inputVal1, inputVal2);
                 return ShowResult(result, inputVal1, inputVal2, symbol);
             }
             catch (Exception ex)
@@ -32,7 +32,7 @@
             }
         }
 
-        public static decimal ShowResult(decimal result, decimal inputVal1, decimal inputVal2, SymbolsElementary operationType)
+        public static double ShowResult(double result, double inputVal1, double inputVal2, SymbolsElementary operationType)
         {
             string symbol = operationType switch
             {
