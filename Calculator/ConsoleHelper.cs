@@ -7,6 +7,12 @@
             WriteColored(message, color, false);
             string? text = Console.ReadLine();
 
+            if (text?.Trim().ToLower() == "clear")
+            {
+                ClearScreen();
+                continue;
+            }
+
             if (string.IsNullOrWhiteSpace(text))
             {
                 WriteColored("\n ⚠️ Input cannot be empty!", ConsoleColor.Red);
@@ -56,13 +62,18 @@
         Console.ResetColor();
     }
 
+    public static void ClearScreen()
+    {
+        Console.Clear();
+        Console.Write("\x1b[3J");
+    }
+
     public static void WaitingScreen(ConsoleColor color = ConsoleColor.DarkYellow)
     {
         Console.CursorVisible = false;
         WriteColored("\n⏳ Press any key to continue ...", color);
         Console.ReadKey(intercept: true);
         Console.CursorVisible = true;
-        Console.Clear();
+        ClearScreen();
     }
-
 }
