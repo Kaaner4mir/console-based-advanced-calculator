@@ -11,7 +11,7 @@ namespace Calculator.Services
                 ConsoleHelper.ClearScreen();
                 Menu.TrigonometryMenu();
 
-                byte inputVal = ConsoleHelper.GetInput<byte>("➡️ Enter the operation you wish to perform numerically: ");
+                byte inputVal = ConsoleHelper.GetInput<byte>("\n➡️ Enter the operation you wish to perform numerically: ");
 
                 if (inputVal == 7) return;
 
@@ -29,7 +29,7 @@ namespace Calculator.Services
 
                 if (StateManager.LastResult.HasValue)
                 {
-                    string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it as the degree? (Y/N): ", ConsoleColor.Yellow);
+                    string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it as the degree? (Y/N): ", ConsoleColor.Yellow);
                     if (response?.Trim().ToUpper() == "Y")
                     {
                         degree = StateManager.LastResult.Value;
@@ -39,7 +39,7 @@ namespace Calculator.Services
 
                 if (!usePreviousResult)
                 {
-                    degree = ConsoleHelper.GetInput<double>("👉 Enter the degree: ");
+                    degree = ConsoleHelper.GetInput<double>("\n👉 Enter the degree: ");
                 }
 
                 double radian = DegreeToRadian(degree);

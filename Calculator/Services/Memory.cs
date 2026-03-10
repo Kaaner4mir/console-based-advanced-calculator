@@ -33,7 +33,7 @@ namespace Calculator.Services
                     bool usePreviousResult = false;
                     if (StateManager.LastResult.HasValue)
                     {
-                        string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
+                        string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
                         if (response?.Trim().ToUpper() == "Y")
                         {
                             inputNumber = StateManager.LastResult.Value;
@@ -43,7 +43,7 @@ namespace Calculator.Services
 
                     if (!usePreviousResult)
                     {
-                        inputNumber = ConsoleHelper.GetInput<double>("👉 Enter the number: ");
+                        inputNumber = ConsoleHelper.GetInput<double>("\n👉 Enter the number: ");
                     }
                 }
 

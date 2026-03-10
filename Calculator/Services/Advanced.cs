@@ -22,7 +22,7 @@ namespace Calculator.Services
 
             if (!usePreviousResult)
             {
-                baseNumber = ConsoleHelper.GetInput<double>("👉 Enter the base number: ");
+                baseNumber = ConsoleHelper.GetInput<double>("\n👉 Enter the base number: ");
             }
 
             double exponent = ConsoleHelper.GetInput<double>("👉 Enter the exponent: ");
@@ -48,7 +48,7 @@ namespace Calculator.Services
 
             if (StateManager.LastResult.HasValue)
             {
-                string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it as the radicand? (Y/N): ", ConsoleColor.Yellow);
+                string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it as the radicand? (Y/N): ", ConsoleColor.Yellow);
                 if (response?.Trim().ToUpper() == "Y")
                 {
                     radicand = StateManager.LastResult.Value;
@@ -56,7 +56,7 @@ namespace Calculator.Services
                 }
             }
 
-            degree = ConsoleHelper.GetInput<int>("👉 Enter the degree: ");
+            degree = ConsoleHelper.GetInput<int>("\n👉 Enter the degree: ");
             if (!usePreviousResult)
             {
                 radicand = ConsoleHelper.GetInput<double>("👉 Enter the radicand: ");
@@ -83,14 +83,14 @@ namespace Calculator.Services
 
             if (StateManager.LastResult.HasValue)
             {
-                string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
+                string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
                 if (response?.Trim().ToUpper() == "Y")
                 {
                     number = (long)StateManager.LastResult.Value;
                 }
                 else
                 {
-                    number = ConsoleHelper.GetInput<long>("👉 Enter the number: ");
+                    number = ConsoleHelper.GetInput<long>("\n👉 Enter the number: ");
                 }
             }
             else
@@ -119,7 +119,7 @@ namespace Calculator.Services
 
             if (StateManager.LastResult.HasValue)
             {
-                string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it as the dividend? (Y/N): ", ConsoleColor.Yellow);
+                string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it as the dividend? (Y/N): ", ConsoleColor.Yellow);
                 if (response?.Trim().ToUpper() == "Y")
                 {
                     dividend = StateManager.LastResult.Value;
@@ -129,7 +129,7 @@ namespace Calculator.Services
 
             if (!usePreviousResult)
             {
-                dividend = ConsoleHelper.GetInput<double>("👉 Enter the dividend number: ");
+                dividend = ConsoleHelper.GetInput<double>("\n👉 Enter the dividend number: ");
             }
             divisor = ConsoleHelper.GetInput<double>("👉 Enter the divisor number: ");
 

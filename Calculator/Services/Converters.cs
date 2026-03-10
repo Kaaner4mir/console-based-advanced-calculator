@@ -60,7 +60,7 @@ namespace Calculator.Services
 
             if (StateManager.LastResult.HasValue)
             {
-                string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
+                string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
                 if (response?.Trim().ToUpper() == "Y")
                 {
                     value = StateManager.LastResult.Value;
@@ -111,7 +111,7 @@ namespace Calculator.Services
 
             if (StateManager.LastResult.HasValue)
             {
-                string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
+                string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
                 if (response?.Trim().ToUpper() == "Y")
                 {
                     value = StateManager.LastResult.Value;
@@ -156,7 +156,7 @@ namespace Calculator.Services
 
             if (StateManager.LastResult.HasValue)
             {
-                string? response = ConsoleHelper.GetInput<string>($"\n👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
+                string? response = ConsoleHelper.GetInput<string>($"👉 The last result was {StateManager.LastResult.Value}. Do you want to use it? (Y/N): ", ConsoleColor.Yellow);
                 if (response?.Trim().ToUpper() == "Y")
                 {
                     value = StateManager.LastResult.Value;

@@ -21,7 +21,7 @@ namespace Calculator.Services
 
             if (!usePreviousResult)
             {
-                inputVal1 = ConsoleHelper.GetInput<double>($"👉 Enter the first value: ");
+                inputVal1 = ConsoleHelper.GetInput<double>($"\n👉 Enter the first value: ");
             }
 
             double inputVal2 = ConsoleHelper.GetInput<double>($"👉 Enter the second value: ");

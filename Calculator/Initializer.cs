@@ -8,6 +8,7 @@ class Initializer
     {
         Console.InputEncoding = Encoding.UTF8;
         Console.OutputEncoding = Encoding.UTF8;
+        Console.Title = "🧮 Advanced Calculator";
 
         while (true)
         {
