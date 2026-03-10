@@ -51,7 +51,6 @@ Here is a glimpse of the different menus and features available in the applicati
 | :---: | :---: |
 | <img src="Images/statistics_menu.png" width="400"/> | <img src="Images/memory_menu.png" width="400"/> |
   
-*(View your recent calculations effortlessly!)*
 <img src="Images/calculation_history.png" width="400"/>
 
 </div>
